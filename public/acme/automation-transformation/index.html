@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Automation Transformation Proposal · Acme Corporation · Origen Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--indigo:#0E0F29;--gold:#E2B947;--sand:#F5F3EC;--copper:#C58940;--ink:#23211C;--paper:#FCFBF7;--line:#E8E4DA;--col:820px;--pad:40px;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .origen-band{background:var(--indigo)}
+  .band-inner{max-width:var(--col);margin:0 auto;padding:16px var(--pad);display:flex;justify-content:space-between;align-items:center}
+  .origen-mark{display:flex;align-items:center;gap:12px}
+  .lockup{display:flex;flex-direction:column;line-height:1}
+  .o-name{font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.15em;color:var(--sand);text-indent:.05em}
+  .o-media{font-weight:600;font-size:7.5px;letter-spacing:.42em;color:var(--gold);opacity:.62;text-indent:.06em;margin-top:4px}
+  .band-inner small{color:var(--sand);opacity:.6;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .wrap{max-width:var(--col);margin:0 auto;padding:0 var(--pad)}
+  .doc-head{padding:76px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--copper);font-weight:600;margin-bottom:20px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,6vw,60px);line-height:1.04;letter-spacing:-.015em;color:var(--indigo);max-width:16ch}
+  .doc-sub{margin-top:22px;font-size:17px;max-width:62ch;color:#4d4a42}
+  section{padding:54px 0;border-bottom:1px solid var(--line)}
+  .sec-kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#9a9587;font-weight:600;margin-bottom:14px}
+  h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,34px);color:var(--indigo);margin-bottom:16px;max-width:22ch}
+  p.lede{font-size:16.5px;max-width:64ch;color:#4d4a42}
+  p.lede+p.lede{margin-top:14px}
+  .phases{display:grid;gap:16px;margin-top:30px}
+  .phase{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 28px}
+  .phase .pnum{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--copper);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  .phase h3{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--indigo);margin-bottom:8px}
+  .phase p{font-size:14.5px;color:#5c594f;max-width:60ch}
+  .invest-total{margin-top:8px;background:var(--indigo);color:var(--sand);border-radius:18px;padding:36px 34px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px}
+  .invest-total .lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .invest-total .amt{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,58px);line-height:1;color:#fff}
+  .invest-total .term{font-size:13.5px;color:#C7CADF;width:100%;margin-top:6px}
+  .opt-title{margin-top:34px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);font-weight:600}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+  th,td{text-align:left;padding:14px 10px;border-bottom:1px solid var(--line)}
+  th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a9587;font-weight:600}
+  td.amt,th.amt{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  td.amt{font-weight:600;color:var(--indigo)}
+  tr.total td{border-top:2px solid var(--indigo);border-bottom:none;font-weight:700;color:var(--indigo);padding-top:16px}
+  .alt{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 28px}
+  .alt h3{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--indigo);margin-bottom:8px}
+  .alt p{font-size:14.5px;color:#5c594f;max-width:62ch}
+  .alt .big{font-family:var(--serif);font-weight:700;font-size:30px;color:var(--indigo);margin-top:10px}
+  ul.terms{list-style:none;margin-top:8px}
+  ul.terms li{font-size:15px;color:#4d4a42;padding:10px 0 10px 26px;position:relative;max-width:64ch}
+  ul.terms li:before{content:'';position:absolute;left:0;top:18px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .cta{padding:56px 0 0;text-align:center}
+  .cta h2{margin:0 auto 10px}
+  .cta p{font-size:15.5px;color:#5c594f;max-width:48ch;margin:0 auto 26px}
+  .btn{display:inline-block;background:var(--gold);color:var(--indigo);font-weight:600;font-size:15px;letter-spacing:.02em;padding:16px 34px;border-radius:10px;text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--indigo);border:1px solid var(--line);margin-left:10px}
+  footer{max-width:var(--col);margin:0 auto;padding:44px var(--pad) 64px;font-size:12px;color:#9a9587;line-height:1.7}
+  @media(max-width:760px){:root{--pad:24px}.doc-head{padding:54px 0 36px}.btn.ghost{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+  <div class="origen-band"><div class="band-inner">
+    <div class="origen-mark">
+      <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="none" stroke="#E2B947" stroke-width="6"/><g stroke="#E2B947" stroke-width="6" stroke-linecap="round"><line x1="50" y1="24" x2="50" y2="76"/><line x1="24" y1="50" x2="76" y2="50"/><line x1="31.6" y1="31.6" x2="68.4" y2="68.4"/><line x1="68.4" y1="31.6" x2="31.6" y2="68.4"/></g></svg>
+      <div class="lockup"><span class="o-name">ORIGEN</span><span class="o-media">MEDIA</span></div>
+    </div>
+    <small>Proposal &middot; June 2026</small>
+  </div></div>
+
+  <div class="wrap">
+    <header class="doc-head">
+      <div class="kicker">Prepared for Acme Corporation</div>
+      <h1>Automation Transformation Proposal</h1>
+      <p class="doc-sub">A full build to automate Acme's core operational workflows, from intake to fulfillment, with a human approval layer on every step that carries risk. Designed to remove repetitive work, protect quality, and scale without adding headcount.</p>
+    </header>
+
+    <section>
+      <div class="sec-kicker">The opportunity</div>
+      <h2>Acme runs on manual effort that does not need to be manual.</h2>
+      <p class="lede">Today your team moves data by hand across disconnected systems, re-enters the same information many times, and relies on a few key people to keep the back office running. That is slow, it is fragile, and it does not scale. This project rebuilds those flows as one connected system that runs on its own and surfaces only the decisions that truly need a person.</p>
+    </section>
+
+    <section>
+      <div class="sec-kicker">What we build</div>
+      <h2>Four phases, each shipped and working before the next begins.</h2>
+      <div class="phases">
+        <div class="phase"><div class="pnum">Phase 1</div><h3>Discovery and architecture</h3><p>We map every workflow, document each system and its data, and design the single source of truth that the whole platform will run on. You approve the blueprint before any build starts.</p></div>
+        <div class="phase"><div class="pnum">Phase 2</div><h3>Core build</h3><p>We build the central database, the automation engine, and the connectors to your existing tools. Repetitive data entry and routing become automatic, with full logging on every action.</p></div>
+        <div class="phase"><div class="pnum">Phase 3</div><h3>Integration and rollout</h3><p>We connect the system to the rest of your stack, add the human approval checkpoints for any step with legal or financial risk, and roll it out to your team with training and live support.</p></div>
+        <div class="phase"><div class="pnum">Phase 4</div><h3>Optimization and handoff</h3><p>We tune performance against real usage, harden the system, and hand over clean documentation so your team owns it with confidence. Ongoing support is available after handoff.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-kicker">Investment</div>
+      <h2>One fixed price for the full engagement.</h2>
+      <div class="invest-total">
+        <span class="lbl">Total engagement</span>
+        <span class="amt">$2,000,000</span>
+        <span class="term">Fixed scope, fixed price. Choose the milestone schedule or the monthly plan below.</span>
+      </div>
+
+      <div class="opt-title">Option A &middot; Milestone schedule</div>
+      <table>
+        <thead><tr><th>Payment</th><th>Tied to</th><th class="amt">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Mobilization</td><td>At signing</td><td class="amt">$300,000</td></tr>
+          <tr><td>Phase 1</td><td>Discovery and architecture complete</td><td class="amt">$400,000</td></tr>
+          <tr><td>Phase 2</td><td>Core build complete</td><td class="amt">$700,000</td></tr>
+          <tr><td>Phase 3</td><td>Integration and rollout complete</td><td class="amt">$450,000</td></tr>
+          <tr><td>Phase 4</td><td>Optimization and handoff</td><td class="amt">$150,000</td></tr>
+          <tr class="total"><td>Total</td><td></td><td class="amt">$2,000,000</td></tr>
+        </tbody>
+      </table>
+
+      <div class="alt">
+        <h3>Option B &middot; Monthly plan</h3>
+        <p>Prefer to spread the investment evenly? Pay across twenty equal monthly installments, beginning at signing, with no change to scope or delivery.</p>
+        <div class="big">20 payments of $100,000</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-kicker">Terms</div>
+      <h2>Clear and simple.</h2>
+      <ul class="terms">
+        <li>Scope is fixed to the four phases above. Anything new is quoted separately before work begins.</li>
+        <li>Each phase is delivered, demonstrated, and approved by Acme before the next phase starts.</li>
+        <li>Any automated message that touches a customer or a financial action passes through a human approval step by default.</li>
+        <li>Acme owns all code, data, and documentation at handoff.</li>
+        <li>This proposal is valid for 30 days from the date above.</li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <h2>Ready to start?</h2>
+      <p>Approve this proposal to lock your start date. We mobilize within one week of signing.</p>
+      <a class="btn" href="#">Approve and pay deposit</a>
+      <a class="btn ghost" href="#">Book a call</a>
+    </div>
+  </div>
+
+  <footer>Origen Media &middot; Automation Transformation Proposal for Acme Corporation &middot; June 2026. This is a sample document. Figures and scope are illustrative.</footer>
+</body>
+</html>
